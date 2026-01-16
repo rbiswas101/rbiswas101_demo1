@@ -2,9 +2,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
       - name: Log in to OpenShift
         run: oc login --token=sha256~xgexqKj2mQRD5_LQtgWL1aNLUrgCMUAcnPrrEJFeM4s --server=https://api.rm3.7wse.p1.openshiftapps.com:6443
 
