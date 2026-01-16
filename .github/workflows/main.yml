@@ -6,9 +6,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Log in to OpenShift
-        # run: oc login --token=${{ secrets.OPENSHIFT_TOKEN }} --server=${{ secrets.OPENSHIFT_SERVER_URL }} --insecure-skip-tls-verify=true
         run: oc login --token=sha256~xgexqKj2mQRD5_LQtgWL1aNLUrgCMUAcnPrrEJFeM4s --server=https://api.rm3.7wse.p1.openshiftapps.com:6443
 
       - name: Start OpenShift build
-        # run: oc start-build my-application-buildconfig -n my-project --from-file=. # Example for a binary build using the current directory
         run: oc start-build demo1 -n rbiswas101-dev --from-file=. # Example for a binary build using the current directory
