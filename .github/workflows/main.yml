@@ -1,9 +1,0 @@
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Log in to OpenShift
-        run: oc login --token=sha256~xgexqKj2mQRD5_LQtgWL1aNLUrgCMUAcnPrrEJFeM4s --server=https://api.rm3.7wse.p1.openshiftapps.com:6443
-
-      - name: Start OpenShift build
-        run: oc start-build demo1 -n rbiswas101-dev --from-file=. # Example for a binary build using the current directory
