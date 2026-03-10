@@ -2,9 +2,10 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY app.py .
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 
-RUN pip install flask
+COPY app.py .
 
 EXPOSE 8081
 
